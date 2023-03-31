@@ -1,14 +1,7 @@
 <form action="" method="POST">
     {% csrf_token %}
-    <label for="pounds">Weight in Pounds:</label><br>
-    <input type="number" id="pounds" name="pounds" min="0.00" step="0.01"><br>
-    <label for="feet">Height in Feet:</label><br>
-    <input type="number" id="feet" name="feet" min="0.00" step="0.01"><br>
-    <label for="inches">Remaining Height in Inches:</label><br>
-    <input type="number" id="inches" name="inches" min="0.00" step="0.01"><br>
+    {{ form.as_p }}
 
     <input type="submit" value="Calculate BMI">
 </form>
-{% if res %}
-    <p>{{ output }}</p>
-{% endif %}
+<div>{{ output }}</div>
