@@ -2,6 +2,6 @@
     {% csrf_token %}
     {{ form.as_p }}
 
-    <input type="submit" value="Calculate BMI">
+    <input type="submit" value="Calculate BMI" id="submitBMI_button">
 </form>
-<div>{{ output }}</div>
+<p id="bmioutput">{{ output }}</p>
