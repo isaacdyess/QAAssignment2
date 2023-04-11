@@ -21,8 +21,8 @@ jobs:
       - python/install-packages:
           pkg-manager: pip
       - run:
-        name: Run tests
-        command: python -m pytest
+          name: Run tests
+          command: python -m pytest
       # - coveralls/upload
 
 # Orchestrate jobs using workflows
