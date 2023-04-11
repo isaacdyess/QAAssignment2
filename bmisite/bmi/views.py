@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .bmicalculations import *
+from .functions import bmicalculations
 from .forms import *
 
 
@@ -12,8 +12,8 @@ def index(request):
         feet = float(form.data["feet"])
         inches = float(form.data["inches"])
 
-        user_bmi = calculate_bmi(feet, inches, pounds)
-        res = output(user_bmi)
+        user_bmi = bmicalculations.calculate_bmi(feet, inches, pounds)
+        res = bmicalculations.output(user_bmi)
 
         
         return render(request, 'bmi/index.html', {"form": form, "output": res})
