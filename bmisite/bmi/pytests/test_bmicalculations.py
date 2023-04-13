@@ -1,5 +1,5 @@
 import pytest
-from .functions import bmicalculations
+from ..functions import bmicalculations
 
 def geninputs():
     inputs = ["0.01", "0.01", "1.00", "1.00", "1.00", "0.00", "1.00", "1.00", "1.00", "1.00", "1.00", "-0.01", "0.00", "0.00", "1.00"]
